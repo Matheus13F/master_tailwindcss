@@ -2,6 +2,8 @@ import { SettingsTabs } from '@/components/SettingsTabs'
 import * as Input from '@/components/Input'
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 import * as FileInput from '@/components/Form/FileInput'
+import Select from '@/components/Form/Select/Index'
+import { SelectItem } from '@/components/Form/Select/SelectItem'
 
 export default function Home() {
   return (
@@ -110,7 +112,10 @@ export default function Home() {
               Country
             </label>
 
-            <div />
+            <Select placeholder="Select a country">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="us" text="United States" />
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
@@ -121,7 +126,10 @@ export default function Home() {
               Timezone
             </label>
 
-            <div />
+            <Select placeholder="Select a timezone">
+              <SelectItem value="est" text="EST-3" />
+              <SelectItem value="utc" text="UTC-5" />
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
@@ -148,6 +156,7 @@ export default function Home() {
 
             <FileInput.Root>
               <FileInput.Trigger />
+              <FileInput.FileList />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>

@@ -1,9 +1,15 @@
 import { SettingsTabs } from '@/components/SettingsTabs'
 import * as Input from '@/components/Input'
-import { EnvelopeIcon } from '@heroicons/react/24/solid'
+import {
+  AdjustmentsHorizontalIcon,
+  EnvelopeIcon,
+  ListBulletIcon,
+  QuestionMarkCircleIcon,
+} from '@heroicons/react/24/solid'
 import * as FileInput from '@/components/Form/FileInput'
 import Select from '@/components/Form/Select/Index'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
+import { Textarea } from '@/components/Form/Textarea'
 
 export default function Home() {
   return (
@@ -140,7 +146,42 @@ export default function Home() {
               </span>
             </label>
 
-            <div />
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem
+                    value="normal"
+                    defaultChecked
+                    text="Normal Text"
+                  />
+                  <SelectItem value="md" text="Mark Down" />
+                </Select>
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className=" rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <AdjustmentsHorizontalIcon className="h-5 w-5 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className=" rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListBulletIcon className="h-5 w-5 text-zinc-500" />
+                  </button>
+                  <button
+                    type="button"
+                    className=" rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <QuestionMarkCircleIcon className="h-5 w-5 text-zinc-500" />
+                  </button>
+                </div>
+              </div>
+              <Textarea
+                id="bio"
+                defaultValue="I'm a frontend developer based in Brazil"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">

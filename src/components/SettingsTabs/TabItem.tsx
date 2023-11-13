@@ -11,11 +11,14 @@ interface TabItemProps {
 
 export function TabItem({ value, title, isSelected = false }: TabItemProps) {
   return (
+    // focus-visible, apenas para estilizar quando o usuario acessar via tabs, acessibilidade. o caminho contrario do within do input usando group para estilizar o span com base na acao do tabs.triger, com base na acao do pai, estilizar o filho
     <Tabs.Trigger
       value={value}
-      className="relative px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700"
+      className="group relative px-1 pb-4 text-sm font-medium text-zinc-500 outline-none hover:text-violet-700 data-[state=active]:text-violet-700"
     >
-      <span className="">{title}</span>
+      <span className="rounded group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4">
+        {title}
+      </span>
 
       {isSelected && (
         <motion.div

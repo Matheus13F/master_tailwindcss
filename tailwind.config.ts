@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -16,6 +17,20 @@ const config: Config = {
       },
       borderWidth: {
         6: '6px',
+      },
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-4px)' },
+          to: { opacity: '1', transform: 'translateY(0px)'  },
+        },
+        // slideUpAndFade: {
+        //   from: { opacity: '1' },
+        //   to: { opacity: '0' },
+        // },
+      },
+      animation: {
+        'slideDownAndFade': 'slideDownAndFade 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+        'slideUpAndFade': 'slideUpAndFade 1s linear',
       },
     },
   },

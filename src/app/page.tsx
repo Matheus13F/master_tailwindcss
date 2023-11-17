@@ -151,24 +151,15 @@ export default function Home() {
                   <SelectItem value="md" text="Mark Down" />
                 </Select>
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className=" rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button variant="ghost" type="button">
                     <AdjustmentsHorizontalIcon className="h-5 w-5 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className=" rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <ListBulletIcon className="h-5 w-5 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className=" rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <QuestionMarkCircleIcon className="h-5 w-5 text-zinc-500" />
-                  </button>
+                  </Button>
                 </div>
               </div>
               <Textarea

@@ -11,6 +11,7 @@ const button = tv({
     variant: {
       primary: 'bg-violet-600 text-white hover:bg-violte-700',
       outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
+      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500',
     },
   },
   defaultVariants: {
@@ -20,7 +21,7 @@ const button = tv({
 
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>
 
-export function Button({ variant, ...props }: ButtonProps) {
+export function Button({ variant, className, ...props }: ButtonProps) {
   // um componente botao fechado neles mesmo, recebe o children automaticamente quando utilizado em outros lugares
-  return <button {...props} className={button({ variant })} />
+  return <button {...props} className={button({ variant, className })} />
 }

@@ -13,10 +13,10 @@ export function Profile() {
         height={200}
       />
       <div className="flex flex-col truncate">
-        <span className="text-sm font-semibold text-zinc-700">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">
           Matheus Goes
         </span>
-        <span className="truncate text-sm text-zinc-500">
+        <span className="truncate text-sm text-zinc-500 dark:text-zinc-500">
           mathasdasdasdasdasdasdasdasdus@gmail.com
         </span>
       </div>
